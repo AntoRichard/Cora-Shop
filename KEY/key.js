@@ -1,0 +1,5 @@
+const Cryptr = require('cryptr');
+
+const crtptr = new Cryptr('Often, you wish to provide a password of arbitrary length, for example, something easy to remember or write down. In these cases, you must come up with a way to transform the password into a key of a specific length. A Password-Based Key Derivation Function (PBKDF) is an algorithm designed for this exact purpose.This seems to be a point of confusion for many people new to using encryption. You can think of the key as the "password". However, these algorithms require the "password" to be a specific length.With AES, there are three possible key lengths, 128-bit (16 bytes), 192-bit (24 bytes) or 256-bit (32 bytes). When you create an AES object, the key size is automatically detected, so it is important to pass in a key of the correct length.');
+
+module.exports = crtptr;

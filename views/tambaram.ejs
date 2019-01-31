@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cora Shop | Tambaram</title>
+
+    <!-- Font awesome -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- SmartMenus jQuery Bootstrap Addon CSS -->
+    <link href="css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
+    <!-- Product view slider -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.simpleLens.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <!-- price picker slider -->
+    <link rel="stylesheet" type="text/css" href="css/nouislider.css">
+    <!-- Theme color -->
+    <link id="switcher" href="css/theme-color/default-theme.css" rel="stylesheet">
+    <!-- <link id="switcher" href="css/theme-color/bridge-theme.css" rel="stylesheet"> -->
+    <!-- Top Slider CSS -->
+    <link href="css/sequence-theme.modern-slide-in.css" rel="stylesheet" media="all">
+
+    <!-- Main style sheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+      <script>
+
+          // The following example creates complex markers to indicate beaches near
+          // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
+          // to the base of the flagpole.
+    
+          function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 10,
+              center: {lat: 12.9219667, lng: 80.0954461}
+            });
+    
+            setMarkers(map);
+          }
+    
+          var beaches = [
+            ['Bondi Beach',12.9243265,80.1006289, 4],
+            ['Coogee Beach',12.9239516,80.0916957, 5],
+            ['Cronulla Beach', 12.923069,80.0932025, 3],
+            ['Manly Beach',12.923069,80.0932025, 2],
+            ['Maroubra Beach', 12.9350838,80.1000093, 1]
+          ];
+    
+          function setMarkers(map) {
+            var image = {
+              url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+              // This marker is 20 pixels wide by 32 pixels high.
+              size: new google.maps.Size(20, 32),
+              // The origin for this image is (0, 0).
+              origin: new google.maps.Point(0, 0),
+              // The anchor for this image is the base of the flagpole at (0, 32).
+              anchor: new google.maps.Point(0, 32)
+            };
+            var shape = {
+              coords: [1, 1, 1, 20, 18, 20, 18, 1],
+              type: 'poly'
+            };
+            for (var i = 0; i < beaches.length; i++) {
+              var beach = beaches[i];
+              var marker = new google.maps.Marker({
+                position: {lat: beach[1], lng: beach[2]},
+                map: map,
+                icon: image,
+                shape: shape,
+                title: beach[0],
+                zIndex: beach[3]
+              });
+            }
+          }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBeyN_Uqd0hmydU09D9VG8tUyePLHoGdU&callback=initMap">
+        </script>
+        <style>
+            /* Always set the map height explicitly to define the size of the div
+             * element that contains the map. */
+            #map {
+              height: 100%;
+            }
+            /* Optional: Makes the sample page fill the window. */
+            html, body {
+              height: 100%;
+              margin: 0;
+              padding: 0;
+            }
+          </style>
+   <!-- wpf loader Two -->
+    <div id="wpf-loader-two">
+      <div class="wpf-loader-two-inner">
+        <span>CORA</span>
+      </div>
+    </div>
+    <!-- / wpf loader Two -->
+  <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
+  <!-- END SCROLL TOP BUTTON -->
+  <!-- Start header section -->
+  <header id="aa-header">
+    <!-- start header bottom  -->
+    <div class="aa-header-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-header-bottom-area">
+              <!-- logo  -->
+              <div class="aa-logo">
+                <!-- Text based logo -->
+                <a href="/index">
+                  <span class="fa fa-shopping-cart"></span>
+                  <p>cora<strong>Shop</strong> <span>Your Shopping Partner</span></p>
+                </a>
+                <!-- img based logo -->
+                <!-- <a href="/index"><img src="img/logo.jpg" alt="logo img"></a> -->
+              </div>
+              <!-- / logo  -->
+               <!-- cart box -->
+              <div class="aa-cartbox">
+                <a class="aa-cart-link" href="#">
+                  <span class="fa fa-shopping-basket"></span>
+                  <span class="aa-cart-title"><a href="/cart">SHOPPING CART</a></span>
+                </a>
+              </div>
+              <!-- / cart box -->
+              <!-- search box -->
+              <div class="aa-search-box">
+                <form method="POST" action="/index">
+                  <input type="text" name="search" id="" placeholder="Search here">
+                  <button type="submit"><span class="fa fa-search"></span></button>
+                </form>
+              </div>
+              <!-- / search box -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / header bottom  -->
+  </header>
+  <!-- / header section -->
+  <!-- menu -->
+  <section id="menu">
+    <div class="container">
+      <div class="menu-area">
+        <!-- Navbar -->
+        <div class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse">
+            <!-- Left nav -->
+            <ul class="nav navbar-nav">
+              <li><a href="/index">Home</a></li>
+              <li><a href="#">Products<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                   <li><a href="/cloth">Clothes</a></li>
+                   <li><a href="/furniture">Furniture</a></li>
+                   <li><a href="/appliances">Appliances</a></li>
+                   <li><a href="/electronics">Electronics</a></li>
+                 </ul>
+               </li>
+              <li><a href="contact">Contact</a></li>
+                <li class="nav navbar-right"><a href="/logout">Logout</a></li>
+            </ul>
+			</div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br><br><br><br><br><br>
+  <div class="">
+    <center style="color:black;"><h1>SHOPS NEAR BY : <span style="color:red;"><b>TAMBARAM</b></span></h1></center>
+  </div>
+  <div>
+      <div class="dropdown">
+      <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">SHOPS
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#bigbazaar">BIG BAZAAR</a></li>
+        <li><a href="#gmart">G MART</a></li>
+        <li><a href="#shoppie">SINGAPORE SHOPPIE</a></li>
+      </ul>
+    </div>
+    </div>
+    <br><br>
+<div id="bigbazaar">
+  <center style="color:red;"><i><b><h2>BIG BAZAAR</h2></b></i></center>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="panel panel-danger">
+            <div class="panel-heading">CLOTHES</div>
+            <div class="panel-body"><img src="areaimages/c1.png" class="img-responsive" style="width:100%" alt="Image"></div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="panel panel-danger">
+            <div class="panel-heading">FURNITURES</div>
+            <div class="panel-body"><img src="areaimages/f1.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="panel panel-danger">
+            <div class="panel-heading">APPLIANCES</div>
+            <div class="panel-body"><img src="images/ac1.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+          </div>
+          </div>
+        <div class="col-sm-3">
+          <div class="panel panel-danger">
+            <div class="panel-heading">ELECTRONICS</div>
+            <div class="panel-body"><img src="images/iphone.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+      </div>
+      </div>
+      </div></div>
+    </div><br><br><br>
+    <div id="gmart">
+      <center style="color:red;"><i><b><h2>G MART</h2></b></i></center>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="panel panel-danger">
+                <div class="panel-heading">CLOTHES</div>
+                <div class="panel-body"><img src="images/tshirt1.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="panel panel-danger">
+                <div class="panel-heading">FURNITURES</div>
+                <div class="panel-body"><img src="areaimages/f2.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="panel panel-danger">
+                <div class="panel-heading">APPLIANCES</div>
+                <div class="panel-body"><img src="images/rf1.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <div class="panel panel-danger">
+                <div class="panel-heading">ELECTRONICS</div>
+                <div class="panel-body"><img src="images/camera2.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+          </div>
+          </div>
+          </div>
+          </div>
+        </div><br><br><br>
+        <div id="shoppie">
+          <center style="color:red;"><i><b><h2>SINGAPORE SHOPPIE</h2></b></i></center>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="panel panel-danger">
+                    <div class="panel-heading">CLOTHES</div>
+                    <div class="panel-body"><img src="images/ts2.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="panel panel-danger">
+                    <div class="panel-heading">FURNITURES</div>
+                    <div class="panel-body"><img src="areaimages/f3.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="panel panel-danger">
+                    <div class="panel-heading">APPLIANCES</div>
+                    <div class="panel-body"><img src="images/wm1.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                  </div>
+                </div>
+
+                <div class="col-sm-3">
+                  <div class="panel panel-danger">
+                    <div class="panel-heading">ELECTRONICS</div>
+                    <div class="panel-body"><img src="images/pre.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+              </div>
+              </div>
+              </div>
+              </div>
+            </div><br><br><br>
+            <div id="map"></div>
+  <!-- footer -->
+  <footer id="aa-footer">
+    <!-- footer bottom -->
+    <div class="aa-footer-top">
+     <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+          <div class="aa-footer-top-area">
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="aa-footer-widget">
+                  <h3>Main Menu</h3>
+                  <ul class="aa-footer-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Our Products</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="aa-footer-widget">
+                  <div class="aa-footer-widget">
+                    <h3>Knowledge Base</h3>
+                    <ul class="aa-footer-nav">
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">Discount</a></li>
+                      <li><a href="#">Special Offer</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="aa-footer-widget">
+                  <div class="aa-footer-widget">
+                    <h3>Useful Links</h3>
+                    <ul class="aa-footer-nav">
+                      <li><a href="#">Site Map</a></li>
+                      <li><a href="#">Search</a></li>
+                      <li><a href="#">Advanced Search</a></li>
+                      <li><a href="#">Suppliers</a></li>
+                      <li><a href="#">FAQ</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="aa-footer-widget">
+                  <div class="aa-footer-widget">
+                    <h3>Contact Us</h3>
+                    <address>
+                      <p>CORA PRODUCTIONS</p>
+                      <p><span class="fa fa-envelope"></span>coraproduction2@gmail.com</p>
+                    </address>
+                    <div class="aa-footer-social">
+                      <a href="#"><span class="fa fa-facebook"></span></a>
+                      <a href="#"><span class="fa fa-twitter"></span></a>
+                      <a href="#"><span class="fa fa-google-plus"></span></a>
+                      <a href="#"><span class="fa fa-youtube"></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+    </div>
+    <!-- footer-bottom -->
+    <div class="aa-footer-bottom">
+      <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+          <div class="aa-footer-bottom-area">
+            <p>Designed by <a href="https://cora-production.firebaseapp.com"/>CORA PRODUCTIONS</a></p>
+            <div class="aa-footer-payment">
+              <span class="fa fa-cc-mastercard"></span>
+              <span class="fa fa-cc-visa"></span>
+              <span class="fa fa-paypal"></span>
+              <span class="fa fa-cc-discover"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </footer>
+  <!-- / footer -->
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4>Login or Register</h4>
+          <form class="aa-login-form" method="POST" action="/login">
+            <label for="">Username or Email address<span>*</span></label>
+            <input type="text" name="username" placeholder="Username or email">
+            <label for="">Password<span>*</span></label>
+            <input type="password" name="password" placeholder="Password">
+            <button class="aa-browse-btn" type="submit">Login</button>
+            <label for="rememberme" class="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
+            <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
+            <div class="aa-register-now">
+              Don't have an account?<a href="/signup">Register now!</a>
+            </div>
+          </form>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.js"></script>
+  <!-- SmartMenus jQuery plugin -->
+  <script type="text/javascript" src="js/jquery.smartmenus.js"></script>
+  <!-- SmartMenus jQuery Bootstrap Addon -->
+  <script type="text/javascript" src="js/jquery.smartmenus.bootstrap.js"></script>
+  <!-- To Slider JS -->
+  <script src="js/sequence.js"></script>
+  <script src="js/sequence-theme.modern-slide-in.js"></script>
+  <!-- Product view slider -->
+  <script type="text/javascript" src="js/jquery.simpleGallery.js"></script>
+  <script type="text/javascript" src="js/jquery.simpleLens.js"></script>
+  <!-- slick slider -->
+  <script type="text/javascript" src="js/slick.js"></script>
+  <!-- Price picker slider -->
+  <script type="text/javascript" src="js/nouislider.js"></script>
+  <!-- Custom js -->
+  <script src="js/custom.js"></script>
+
+  </body>
+  </html>
